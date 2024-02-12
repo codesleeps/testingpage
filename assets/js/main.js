@@ -173,7 +173,7 @@
    * Clients Slider
    */
   new Swiper('.clients-slider', {
-    speed: 400,
+    speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
