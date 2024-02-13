@@ -417,9 +417,11 @@ h6 {
 }
 
 #hero h2 {
+  display: flex;
+  justify-content: center;
   color: #fff;
   margin-bottom: 20px;
-  font-size: 48px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -784,7 +786,7 @@ section {
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
-  color: #f9f7f7;
+  color: #e7e2e2;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 3px;
@@ -794,7 +796,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #c1760d;;
+  background-color: #ae0202;
 }
 
 .portfolio #portfolio-flters li:last-child {
