@@ -420,7 +420,8 @@ h6 {
   display: flex;
   justify-content: center;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  padding: 20px;
   font-size: 28px;
   font-weight: 700;
 }
