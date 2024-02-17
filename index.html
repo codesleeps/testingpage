@@ -39,6 +39,16 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script>
+    if(!('serviceWorker' in navigator)) {
+      console.log('Service Worker not supported');
+      return;
+    }
+    navigator.serviceWorker.register('/sw.js')
+    .then(function(registration) {
+      console.log('SW registered! Scope is:', registration.scope);
+    }); // .catch a registration error
+  </script>
 </head>
 <!-- <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
