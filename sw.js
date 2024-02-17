@@ -1,6 +1,7 @@
 // Registration triggers install event
 self.addEventListener('install', event => {
   // Precache files
+  
 });
 
 const cacheName = 'static-shell-v1';const resourcesToPrecache = [
