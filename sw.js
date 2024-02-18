@@ -133,6 +133,7 @@ const cacheName = 'static-shell-v1';const resourcesToPrecache = [
   'assets/img/services/VID-20230808-WA0050.mp4',
   'assets/img/services/walls.mp4',
   'assets/img/services/working.mp4',
+  'assets/img/services/venetian_boards.mp4',
   'assets/img/favicon1.png',
   'assets/img/favicon2.png',
   'assets/img/favicon3.png',
