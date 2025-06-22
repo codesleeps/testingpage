@@ -16,6 +16,19 @@
 <!--   Critical CSS  -->
 <style type="text/css">
 body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{text-decoration:none;color:#e1e1e1}h2 h6{font-family:"Raleway"sans-serif}.back-to-top{position:fixed;visibility:hidden;opacity:0;left:15px;bottom:15px;z-index:996;background:#ea0e0e;width:40px;height:40px;border-radius:4px}.back-to-top i{font-size:24px;color:#fff;line-height:0}#topbar{background:#080808;font-size:15px;height:40px;padding:0;border-top:3px solid black}#topbar .contact-info a{line-height:0;color:#faf8f8}#topbar .contact-info i{color:#eb2608;line-height:0;margin-right:5px}#topbar .contact-info .phone-icon{margin-left:15px}#topbar .social-links a{color:#ec0c0c;padding:20px 10px;line-height:1px}#header{background-color:#090808;z-index:997;height:70px;border-top:2px solid red;border-bottom:2px solid red}#header .logo{font-size:auto}#header .logo img{max-height:60px}.navbar{padding:0}.navbar ul{margin:0;padding:0;display:flex;list-style:none;align-items:center}.navbar li{position:relative}.navbar a{display:flex;align-items:center;justify-content:space-between;padding:10px 0 10px 30px;font-size:15px;color:#eb0909;white-space:nowrap}.navbar .active{color:#e78505}.navbar .getstarted{color:#db0909;padding:8px 25px;margin-left:30px;border-radius:4px;font-size:14px}.mobile-nav-toggle{color:#222222;font-size:28px;display:none;line-height:0}@media(max-width:991px){.mobile-nav-toggle{display:block}.navbar ul{display:none}}#hero{width:100%;height:80vh;background-color:rgba(9,9,9,0.8);overflow:hidden;position:relative;border-bottom:3px solid red}#hero .carousel,#hero .carousel-inner,#hero .carousel-item,#hero .carousel-item::before{background-size:cover;background-position:center;background-repeat:no-repeat;position:absolute;top:0;right:0;left:0;bottom:0}#hero .carousel-item::before{content:"";background-color:rgba(7,7,7,0.2)}#hero .carousel-container{display:flex;justify-content:center;align-items:center;position:absolute;bottom:0;top:0;left:50px;right:50px}#hero .container{text-align:center}#hero h2{color:#fff;margin-bottom:20px;font-size:48px;font-weight:700}#hero p{-webkit-animation-delay:0.4s;animation-delay:0.4s;margin:0 auto 30px auto;color:#fff}#hero .carousel-inner .carousel-item{background-position:center top}#hero .carousel-inner .carousel-item{opacity:0}#hero .carousel-inner .active{opacity:1}#hero .carousel-control-next-icon,#hero .carousel-control-prev-icon{background:none;font-size:30px;line-height:0;width:auto;height:auto;background:rgba(255,255,255,0.2);border-radius:50px;color:rgba(230,10,10,0.901);width:54px;height:54px;display:flex;align-items:center;justify-content:center}#hero .btn-get-started{font-family:"Raleway",sans-serif;font-weight:500;font-size:14px;letter-spacing:1px;display:inline-block;padding:14px 32px;border-radius:4px;line-height:1;color:#f4f1f1;-webkit-animation-delay:0.8s;animation-delay:0.8s;background:#e51010}@media(max-width:992px){#hero{height:100vh}#hero .carousel-container{top:66px}}@media(max-width:768px){#hero h2{font-size:28px}}@media(min-width:1024px){#hero .carousel-control-prev,#hero .carousel-control-next{width:5%}}@media(max-height:500px){#hero{height:120vh}}section{padding:60px 0}.section-title{color:#d17d06;text-align:center;padding-bottom:30px}.section-title h2{font-size:32px;font-weight:bold;text-transform:uppercase;margin-bottom:20px;padding-bottom:20px;position:relative}.section-title h2::before{content:"";position:absolute;display:block;width:120px;height:1px;background:#ddd;bottom:1px;left:calc(50%-60px)}.section-title h2::after{content:"";position:absolute;display:block;width:40px;height:3px;background:#d9a55c;bottom:0;left:calc(50%-20px)}
+.swiper-pagination-bullet {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 8px !important;
+  border-radius: 50% !important;
+  background: #e51010 !important;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #d17d06 !important;
+}
 </style>
   <title>JAM Plastering Services</title>
   <!-- Favicons -->
@@ -45,14 +58,6 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
   <noscript>
     <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
   </noscript>
-  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
-  </noscript>
-  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-  </noscript>
   <!-- font awesome  -->
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Main CSS File -->
@@ -71,18 +76,25 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
       console.log('SW registered! Scope is:', registration.scope);
     }); // .catch a registration error
   </script>
-  
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+  </noscript>
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
+  </noscript>
 </head>
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/64d436ee94cf5d49dc697d83/1h7efd55m';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
+<script>
+  window.addEventListener('load', function() {
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/64d436ee94cf5d49dc697d83/1h7efd55m';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  });
 </script> 
 <body>
   <!-- ======= Top Bar ======= -->
@@ -93,12 +105,10 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
         <i class="bi bi-phone-fill phone-icon"></i><a href="tel:+447908677945">+447908677945</a>
       </div>
       <div class="social-links d-none d-md-block">
-        <a href="https://twitter.com/JamPlaster34946" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="http://facebook.com/profile.php?id=100063699574409" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D
-          "class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/junior-miller-87670119b" class="linkedin"><i
-            class="bi bi-linkedin"></i></i></a>
+        <a href="https://twitter.com/JamPlaster34946" class="twitter" aria-label="JAM Plastering on Twitter"><i class="bi bi-twitter"></i></a>
+        <a href="http://facebook.com/profile.php?id=100063699574409" class="facebook" aria-label="JAM Plastering on Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D" class="instagram" aria-label="JAM Plastering on Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/junior-miller-87670119b" class="linkedin" aria-label="JAM Plastering on LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </section>
@@ -323,40 +333,48 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
         <!-- <h4 class="italic"></h4>By <br> J.A. Miller (CEO)</h4> -->
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <picture class="swiper-slide">
-              <img src="assets/img/polished_finishes/venetian_slidesred_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour Light Red">
-            </picture>
-
-            <picture class="swiper-slide">
-              <img src="assets/img/polished_finishes/venetian_slidesgrey_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour Light Grey">
-            </picture>
-
-            <picture class="swiper-slide">
-              <img src="assets/img/polished_finishes/venetian_slidespeach_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour Light Orange">
-            </picture>
-
-            <picture class="swiper-slide">
-              <img src="assets/img/polished_finishes/venetian_slidessilver_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour Silver">
-            </picture>
-
-            <picture class="swiper-slide">
-              <img src="./assets/img/polished_finishes/venetian_slidesaqua_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour Light Aqua">
-            </picture>
-
-            <picture class="swiper-slide">
-              <img src="./assets/img/polished_finishes/venetian_slidesblue_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour">
-            </picture>
-
-            <picture class="swiper-slide">
-              <img src="./assets/img/polished_finishes/venetian_slidesmetal_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
-                alt="Venetian Polished PLaster Finish Marble Effect Colour Light Musk">
-            </picture>
+            <div class="swiper-slide">
+              <picture>
+                <img src="assets/img/polished_finishes/venetian_slidesred_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour Light Red">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="assets/img/polished_finishes/venetian_slidesgrey_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour Light Grey">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="assets/img/polished_finishes/venetian_slidespeach_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour Light Orange">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="assets/img/polished_finishes/venetian_slidessilver_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour Silver">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="./assets/img/polished_finishes/venetian_slidesaqua_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour Light Aqua">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="./assets/img/polished_finishes/venetian_slidesblue_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <img src="./assets/img/polished_finishes/venetian_slidesmetal_180.webp" class="img-fluid" width="180" height="180" loading="lazy"
+                  alt="Venetian Polished PLaster Finish Marble Effect Colour Light Musk">
+              </picture>
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -744,11 +762,10 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
                 With nearly 40 years experience and expertise amazing results achieved on every project
               </p>
               <div class="social">
-                <a href="https://twitter.com/JamPlaster34946" aria-label=" twitter social media site" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="http://facebook.com/profile.php?id=100063699574409"  aria-label="facebook social media site" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D"  aria-label="instagram social media site" target="_blank"><i
-                    class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/junior-miller-87670119b"  aria-label="linkedin social media site" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/JamPlaster34946" aria-label="JAM Plastering on Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="http://facebook.com/profile.php?id=100063699574409" aria-label="JAM Plastering on Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D" aria-label="JAM Plastering on Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/junior-miller-87670119b" aria-label="JAM Plastering on LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -761,11 +778,10 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
                 Integrating the latest equipment and methods to maintain our high standards of work
               </p>
               <div class="social">
-                <a href="https://twitter.com/JamPlaster34946" aria-label=" twitter social media site" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="http://facebook.com/profile.php?id=100063699574409" aria-label="facebook social media site" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D" aria-label="instagram social media site" target="_blank"><i
-                    class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/junior-miller-87670119b" aria-label="linkedin social media site" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/JamPlaster34946" aria-label="JAM Plastering on Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="http://facebook.com/profile.php?id=100063699574409" aria-label="JAM Plastering on Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D" aria-label="JAM Plastering on Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/junior-miller-87670119b" aria-label="JAM Plastering on LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -777,11 +793,10 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
                 Latest onsite tech to keep our workflow fluent and our standards high
               </p>
               <div class="social">
-                <a href="https://twitter.com/JamPlaster34946" aria-label=" twitter social media site" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="http://facebook.com/profile.php?id=100063699574409" aria-label="facebook social media site"  target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D" aria-label="instagram social media site" target="_blank"><i
-                    class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/junior-miller-87670119b" aria-label="linkedin social media site" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/JamPlaster34946" aria-label="JAM Plastering on Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="http://facebook.com/profile.php?id=100063699574409" aria-label="JAM Plastering on Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/jamplastering?utm_source=qrigshid=ZDc4ODBmNjlmNQ%3D%3D" aria-label="JAM Plastering on Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/junior-miller-87670119b" aria-label="JAM Plastering on LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -968,13 +983,13 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
 </body>
 
