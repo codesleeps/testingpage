@@ -69,13 +69,14 @@ body{font-family:"Open Sans"sans-serif;color:#edebe9;background-color:#090909}a{
 </head>
 <script>
   window.addEventListener('load', function() {
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/64d436ee94cf5d49dc697d83/1h7efd55m';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
+    setTimeout(function() {
+      var s1 = document.createElement("script");
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/64d436ee94cf5d49dc697d83/1h7efd55m';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      document.body.appendChild(s1);
+    }, 5000); // Delay by 5 seconds after load
   });
 </script> 
 <body>
